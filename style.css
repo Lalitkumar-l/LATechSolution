@@ -120,9 +120,25 @@
     @media (max-width: 880px){
       .hero{grid-template-columns:1fr;}
       .about,.grid,.contact-wrap{grid-template-columns:1fr}
-      .links{display:none}
+     .links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background: #0c1426;
+    padding: 15px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+  }
+  .links.show {
+    display: flex !important;
+  }
       .menu-btn{display:block}
       nav.mobile{display:none;flex-direction:column;gap:14px;padding:12px 0}
       nav.mobile a{padding:10px 0;border-top:1px solid rgba(148,163,184,.1)}
       nav.mobile.show{display:flex}
     }
+
+    
